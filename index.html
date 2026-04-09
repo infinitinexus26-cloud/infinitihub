@@ -8,7 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <style>
+    @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Esconde os links no celular (pode adicionar menu hambúrguer depois) */
+            }
 
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .logo-container img {
+                height: 35px;
+            }
+
+            .logo-container span {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
     <!-- HEADER -->
     <header>
         <nav>
