@@ -134,5 +134,16 @@
         <p>Rhaony • (21) 97006-9056 • @rhaony858</p>
     </footer>
 
+    <script>
+        function updateDeviceClass() {
+            const body = document.body;
+            const isMobile = window.matchMedia('(max-width: 900px)').matches || /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+            body.classList.toggle('device-mobile', isMobile);
+            body.classList.toggle('device-desktop', !isMobile);
+        }
+
+        window.addEventListener('DOMContentLoaded', updateDeviceClass);
+        window.addEventListener('resize', updateDeviceClass);
+    </script>
 </body>
 </html>
