@@ -4,32 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infiniti Nexus | Criação de Sites Profissionais</title>
-    <meta name="description" content="Crio sites bonitos, rápidos e otimizados para pequenas empresas. Design moderno, WhatsApp integrado e foco em resultados.">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Crio sites bonitos, rápidos e otimizados para pequenas empresas.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: #0a0a0a;
+            border-bottom: 1px solid #1f1f1f;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            height: 42px;
+            width: auto;
+        }
+
+        .logo-container span {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00ff9d;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff9d;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), 
+                        url('https://images.unsplash.com/photo-1555066932-4365d14bab9c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            background: #00ff9d;
+            color: #000;
+            padding: 16px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #00cc7a;
+            transform: scale(1.05);
+        }
+
+        /* Seções */
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #00ff9d;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Esconde os links no celular (pode adicionar menu hambúrguer depois) */
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .logo-container img {
+                height: 35px;
+            }
+
+            .logo-container span {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header -->
-<header>
-    <nav>
-        <!-- Logo + Nome lado a lado -->
-        <div class="logo">
-            <img src="imagens/logo.png" alt="Infiniti Nexus Logo">
-            <span>Infiniti Nexus</span>
-        </div>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="imagens/logo.png" alt="Infiniti Nexus Logo">
+                <span>Infiniti Nexus</span>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#pacotes">Pacotes</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Links de navegação -->
-        <div class="nav-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#pacotes">Pacotes</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#contato">Contato</a>
-        </div>
-    </nav>
-</header>
-
-    <!-- Hero -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
             <h1>Sites profissionais que fazem<br>seu negócio crescer</h1>
@@ -40,110 +194,11 @@
         </div>
     </section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="sobre">
-        <h2>Sobre a Infiniti Nexus</h2>
-        <div class="sobre-content">
-            <div class="sobre-text">
-                <p>Olá, sou o <strong>Rhaony</strong>, fundador da Infiniti Nexus.</p>
-                <p>Ajudo pequenas empresas a terem uma presença online profissional, confiável e que realmente gera resultados.</p>
-                <p>Meu foco é criar sites simples, elegantes e funcionais — sem complicações desnecessárias. Cada projeto é pensado para ser fácil de usar tanto para você quanto para seus clientes.</p>
-                <p>Se você está cansado de depender apenas do Instagram e quer dar um passo maior no digital, estou aqui para te ajudar.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Você pode adicionar as outras seções (Sobre, Serviços, etc.) aqui -->
 
-    <!-- Serviços -->
-    <section id="servicos">
-        <h2>Meus Serviços</h2>
-        <div class="servicos-grid">
-            <div class="card">
-                <h3>✅ Sites Institucionais</h3>
-                <p>Sites completos com várias páginas para apresentar sua empresa de forma profissional.</p>
-            </div>
-            <div class="card">
-                <h3>✅ Landing Pages</h3>
-                <p>Páginas de alta conversão focadas em agendamento ou vendas.</p>
-            </div>
-            <div class="card">
-                <h3>✅ Integração com WhatsApp</h3>
-                <p>Botão flutuante e agendamento direto pelo WhatsApp.</p>
-            </div>
-            <div class="card">
-                <h3>✅ Design Responsivo</h3>
-                <p>Seu site fica perfeito em celular, tablet e computador.</p>
-            </div>
-            <div class="card">
-                <h3>✅ Otimização Básica</h3>
-                <p>Preparado para aparecer melhor nos mecanismos de busca.</p>
-            </div>
-            <div class="card">
-                <h3>✅ Manutenção Mensal</h3>
-                <p>Atualizações, backups e suporte contínuo.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pacotes -->
-    <section id="pacotes" class="pacotes">
-        <h2>Pacotes</h2>
-        <div class="pacotes-grid">
-            <div class="pacote-card">
-                <h3>Essencial</h3>
-                <div class="preco">R$ 1.800</div>
-                <p>Landing Page (1 página)</p>
-                <p>Design responsivo</p>
-                <p>WhatsApp integrado</p>
-                <p>Entrega em 5-7 dias</p>
-            </div>
-            <div class="pacote-card destaque">
-                <h3>Profissional</h3>
-                <div class="preco">R$ 3.500</div>
-                <p>Site com 5-7 páginas</p>
-                <p>Galeria de fotos</p>
-                <p>SEO básico local</p>
-                <p>Domínio + Hospedagem 1 ano</p>
-                <p><strong>Mais escolhido</strong></p>
-            </div>
-            <div class="pacote-card">
-                <h3>Completo</h3>
-                <div class="preco">R$ 5.500</div>
-                <p>Tudo do Profissional</p>
-                <p>Manutenção por 3 meses</p>
-                <p>Google Meu Negócio otimizado</p>
-                <p>Suporte prioritário</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato">
-        <h2>Vamos conversar?</h2>
-        <p style="text-align:center; font-size:1.3rem; margin-bottom:40px;">
-            Me conte sobre seu negócio e eu te envio uma proposta personalizada.
-        </p>
-        <div style="text-align:center;">
-            <a href="https://wa.me/5521970069056" target="_blank" style="background:#00ff9d; color:#000; padding:18px 50px; font-size:1.4rem; border-radius:8px; text-decoration:none; display:inline-block;">
-                Falar no WhatsApp (21) 97006-9056
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Infiniti Nexus - Criação de Sites Profissionais</p>
-        <p>Rhaony • (21) 97006-9056 • @rhaony858</p>
+    <footer style="text-align: center; padding: 40px 20px; background: #000; color: #666;">
+        <p>&copy; 2026 Infiniti Nexus - Criação de Sites</p>
     </footer>
 
-    <script>
-        function updateDeviceClass() {
-            const body = document.body;
-            const isMobile = window.matchMedia('(max-width: 900px)').matches || /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
-            body.classList.toggle('device-mobile', isMobile);
-            body.classList.toggle('device-desktop', !isMobile);
-        }
-
-        window.addEventListener('DOMContentLoaded', updateDeviceClass);
-        window.addEventListener('resize', updateDeviceClass);
-    </script>
 </body>
 </html>
